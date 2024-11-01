@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+
+<style>
+    .pagination {
+        display: inline-block;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+
+    ::selection {
+        color: #fff;
+        background: #000000;
+    }
+
+    .wrapper {
+        width: 400px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px 25px 40px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    header h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    header p {
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .price-input {
+        width: 100%;
+        display: flex;
+        margin: 30px 0 35px;
+    }
+
+    .price-input .field {
+        display: flex;
+        width: 100%;
+        height: 45px;
+        align-items: center;
+    }
+
+    .field input {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        font-size: 19px;
+        margin-left: 12px;
+        border-radius: 5px;
+        text-align: center;
+        border: 1px solid #999;
+        -moz-appearance: textfield;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    .price-input .separator {
+        width: 130px;
+        display: flex;
+        font-size: 19px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider {
+        height: 5px;
+        position: relative;
+        background: #ddd;
+        border-radius: 5px;
+    }
+
+    .slider .progress {
+        height: 100%;
+        left: 25%;
+        right: 25%;
+        position: absolute;
+        border-radius: 5px;
+        background: #00f73c;
+    }
+
+    .range-input {
+        position: relative;
+    }
+
+    .range-input input {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: -5px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        height: 17px;
+        width: 17px;
+        border-radius: 50%;
+        background: #00f73c;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        height: 17px;
+        width: 17px;
+        border: none;
+        border-radius: 50%;
+        background: #00f73c;
+        pointer-events: auto;
+        -moz-appearance: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Support */
+    .support-box {
+        top: 2rem;
+        position: relative;
+        bottom: 0;
+        text-align: center;
+        display: block;
+    }
+
+    .b-btn {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .b-btn.paypal i {
+        color: blue;
+    }
+
+    .b-btn:hover {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .b-btn i {
+        font-size: 20px;
+        color: yellow;
+        margin-top: 2rem;
+    }
+</style>
+
+<body>
+    <!-- mask for background overlay -->
+    <div class="mask"></div>
+    <!-- mask for background overlay -->
+
+    <!-- about us -->
+    <div class="about-us-sidebar p-4">
+        <i class="fa-solid fa-xmark fs-3 float-end m-2 about-cut"></i>
+        <h3 class="fw-xbold fs-1">ABOUT <span class="light-green-text">MOBILEX</span></h3>
+
+        <img src="" alt="">
+
+        <h3 class="fw-xbold fs-3 lh-1">CONTINUING TO <span class="light-green-text">INNOVATE</span> ON <br> BEHALF OF
+            CONSUMERS.</h3>
+        <div class="fw-bold my-4 fs-5">MobileX is the world's most customizable mobile carrier, delivering the ultimate
+            in
+            choice and cost
+            control.</div>
+        <p class="my-4 fs-5">Created by the team that brought you Boost Mobile, MobileX is led by Peter Adderton, the
+            thought-provoking
+            mobile industry veteran with over 20 years of experience championing the consumer in wireless through his
+            industry-disrupting companies. MobileX utilizes artificial intelligence to predict how much data customers
+            need, delivering a dramatic reduction in cost while ensuring reliable speed and service.
+        </p>
+        <p class="fs-5">
+            If you’re interested in joining the MobileX team, send us your resumé to <a class="light-green-text"
+                href="">careers@mymobilex.com</a> and we’ll let
+            you know when we’re hiring.
+        </p>
+    </div>
+    <!-- about us end -->
+
+    <!-- main navbar -->
+    <div class="navmain ">
+        <div class="dark-gray-green-bg">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="fw-semibold text-white py-2 ">Interested in selling MobileX in your store?<span
+                        class="light-green-text">Learn more</span></div>
+                <i class="fa-solid text-white fs-5 fa-cart-shopping"></i>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg dark-green-bg py-4">
+            <div class="container">
+                <a class="navbar-brand" href="Home.html"><img src="accets/images/image-4.png" alt="" width="140px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon text-white"></span> -->
+                    <i class="fa fa-bars text-white fs-4" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold" href="Home.html#dataPlans">Plans</a>
+                        </li>
+                        <li class="nav-item mx-1 dropdown">
+                            <a class="nav-link text-white fw-bold dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Phones
+                            </a>
+                            <ul class="dropdown-menu rounded-0 dark-green-bg">
+                                <li><a class="dropdown-item bg-transparent text-white" href="devices.html">Devices</a>
+                                </li>
+                                <li><a class="dropdown-item bg-transparent text-white" href="Sim-kit.html">SIM Kit</a>
+                                </li>
+                                <li><a class="dropdown-item bg-transparent text-white" href="E-sim.html">E-SIM</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold" href="Compatibility.html">Compatibility</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold" href="Data-Forecaster.html">Data Forecaster</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold" href="Home.html#storeLocator">Store Locator</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold" href="FAQS.html">FAQs</a>
+                        </li>
+                        <li class="nav-item mx-1">
+                            <a class="text-white nav-link fw-bold aboutUs" href="#">About us</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <button class="btn dark-gray-green-bg text-white p-0 rounded-2 px-3 fw-bold"
+                            type="submit">English</button>
+                        &nbsp;
+                        <button class="btn light-green-bg rounded-0 px-4 py-2 fw-semibold" type="submit">Get
+                            start</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- main navbar end -->
+
+
+    <!-- Devices -->
+    <section class="bg-white py-4">
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div>
+                        <div class="rounded-3 overflow-hidden border border-dark">
+                            <div class="text-uppercase fs-5 fw-bold px-2 py-2 text-white bg-dark">search</div>
+                            <div class="d-flex align-items-center px-2"><i class="fa light-green-text fa-search"
+                                    aria-hidden="true"></i> <input class="py-2 rounded-0 border-0 form-control"
+                                    type="text" placeholder="Search Products"></div>
+                        </div>
+                        <div class="rounded-3 my-3 overflow-hidden border border-dark">
+                            <div class="text-uppercase fs-5 fw-bold px-2 py-2 text-white bg-dark">sort</div>
+                            <div><select name="" id="" class="form-select">
+                                    <option value="">Newly Added</option>
+                                    <option value="">Price: Low first</option>
+                                    <option value="">Price: High first</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rounded-3 overflow-hidden border border-dark">
+                            <div class="text-uppercase fs-5 fw-bold px-2 py-2 text-white bg-dark">FILTER</div>
+
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button bg-white fw-xbold collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#1" aria-expanded="false"
+                                            aria-controls="1">
+                                            Condition
+                                        </button>
+                                    </h2>
+                                    <div id="1" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-0">
+                                            <input type="checkbox" class="" name="" id="Any">
+                                            <label for="Any">Any</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="New">
+                                            <label for="New">New(24)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Pre-Owned">
+                                            <label for="Pre-Owned">Pre-Owned(3)</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button bg-white fw-xbold collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Brand
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-0">
+                                            <input type="checkbox" class="" name="" id="All">
+                                            <label for="All">All</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Apple">
+                                            <label for="Apple">Apple (3)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Google">
+                                            <label for="Google">Google (3)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="MobileX">
+                                            <label for="MobileX">MobileX (1)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Motorola">
+                                            <label for="Motorola">Motorola (9)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="OnePlus">
+                                            <label for="OnePlus">OnePlus (1)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Samsung">
+                                            <label for="Samsung">Samsung (10)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button bg-white fw-xbold collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Color
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body pt-0">
+                                            <input type="checkbox" class="" name="" id="Black">
+                                            <label for="Black">Black (17)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Blue">
+                                            <label for="Blue">Blue (4)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Gray">
+                                            <label for="Gray">Gray (6)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Green">
+                                            <label for="Green">Green (1)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="Purple">
+                                            <label for="Purple">Purple (9)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button bg-white fw-xbold collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#4" aria-expanded="false"
+                                            aria-controls="4">
+                                            Network Speed
+                                        </button>
+                                    </h2>
+                                    <div id="4" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <input type="checkbox" class="" name="" id="4G">
+                                            <label for="4G">4G LTE(6)</label>
+                                            <br>
+                                            <input type="checkbox" class="" name="" id="5G">
+                                            <label for="5G">5G Capable(21)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button bg-white fw-xbold collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#5" aria-expanded="false"
+                                            aria-controls="5">
+                                            Price Range
+                                        </button>
+                                    </h2>
+                                    <div id="5" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="d-flex">
+                                                <div class="">
+
+
+                                                    <div class="slider">
+                                                        <div class="progress"></div>
+                                                    </div>
+                                                    <div class="range-input">
+                                                        <input type="range" class="range-min" min="0" max="10000"
+                                                            value="2500" step="100">
+                                                        <input type="range" class="range-max" min="0" max="10000"
+                                                            value="7500" step="100">
+                                                    </div>
+                                                    <div class="price-input">
+                                                        <div class="field">
+                                                            <input type="number" class="input-min" value="2500">
+                                                        </div>
+                                                        <div class="separator">-</div>
+                                                        <div class="field">
+                                                            <input type="number" class="input-max" value="7500">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn light-green-bg fw-bold w-100 py-2 my-3">Clear Filter</button>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <img src="accets/images/WhatsApp Image 2024-08-02 at 2.39.38 AM.jpeg" alt="">
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">Motorola G 5G (2022)</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover" src="accets/images/Apple_iPhone_11_black_600x600.png"
+                                        width="200px" height="200px" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">Motorola G 5G (2022)</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover" src="accets/images/Apple_iPhone_11_black_600x600.png"
+                                        width="200px" height="200px" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">Motorola G Play (2023)</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover" src="https://avatars.mds.yandex.net/i?id=4c7c581973968cd5f262585d742208d175e278bf-5480282-images-thumbs&n=13"
+                                        width="200px" height="200px" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">MobileX SIM Kit</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover"
+                                        src="accets/images/Apple_iPhone_2ng_gen_black_front_only.png" width="200px" height="200px"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">MobileX SIM Kit</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover"
+                                        src="accets/images/Apple_iPhone_2ng_gen_black_front_only.png" width="200px" height="200px"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-6 my-2">
+                            <div class="card rounded-3 bg-light border">
+                                <div class="fw-xbold text-center my-3">MobileX SIM Kit</div>
+                                <div class="">
+                                    <img class="d-block m-auto object-fit-cover"
+                                        src="accets/images/Motorola_G_Stylus_4G_2023_front_blue.png" width="200px" height="200px"
+                                        alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text text-center">Buy with <b>Affirm</b> on orders over $50. Check
+                                        your purchasing power</p>
+                                    <div class="fw-semibold text-center">$9.88</div>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="#"
+                                            class="btn rounded-0 py-2 w-auto px-4 light-green-bg fw-semibold">View
+                                            Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center my-3">
+                        <div class="pagination">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="bg-dark text-white">1</a>
+                            <a href="#" class="border">2</a>
+                            <a href="#" class="border">3</a>
+                            <a href="#" class="border">4</a>
+                            <a href="#">&raquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Devices end -->
+
+
+    <!-- footer -->
+    <footer class="dark-green-bg py-5">
+        <div class="container">
+            <div class="row my-4 justify-content-center">
+                <div class="col-md-4 my-3">
+                    <div class="text-lg-start text-center">
+                        <a class="navbar-brand" href="#"><img src="accets/images/image-4.png" alt="" width="140px"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3">
+                    <div class="text-center">
+                        <i class="fa-brands text-white fs-3 mx-2 fa-instagram"></i>
+                        <i class="fa-brands text-white fs-3 mx-2 fa-facebook"></i>
+                        <i class="fa-brands text-white fs-3 mx-2 fa-x-twitter"></i>
+                        <i class="fa-brands text-white fs-3 mx-2 fa-linkedin-in"></i>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3">
+                    <div class=" text-center">
+                        <img src="accets/images/app-store-logo.png" alt="" width="130px">
+                        <img src="accets/images/google-play-logo.png" alt="" width="130px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top border-light"></div>
+
+            <div class="row my-4">
+                <div class="col-md-6 my-2">
+                    <div class="text-lg-start text-center">
+                        MobileX and be you are registered trademarks of Mobile X Global, Inc. ©2024 Mobile X Global,
+                        Inc.
+                    </div>
+                </div>
+                <div class="col-md-6 my-2">
+                    <div class="">
+                        <ul class="d-flex justify-content-lg-end justify-content-center">
+                            <a href="Privacy-policy.html" class="list-group px-2 text-decoration-underline"> Privacy
+                                Policy</a>
+                            <a href="terms-of-services.html" class="list-group px-2 text-decoration-underline"> Terms of
+                                Service</a>
+                            <a href="Terms-of-Use.html" class="list-group px-2 text-decoration-underline"> Terms of Use
+                            </a>
+                            <a href="Accessibility.html" class="list-group px-2 text-decoration-underline">
+                                Accessibility</a>
+                            <a href="Device-Return.html" class="list-group px-2 text-decoration-underline"> Device
+                                Return</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+
+    <script src="script.js"></script>
+    <script>const rangeInput = document.querySelectorAll(".range-input input"),
+            priceInput = document.querySelectorAll(".price-input input"),
+            range = document.querySelector(".slider .progress");
+        let priceGap = 1000;
+
+        priceInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minPrice = parseInt(priceInput[0].value),
+                    maxPrice = parseInt(priceInput[1].value);
+
+                if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
+                    if (e.target.className === "input-min") {
+                        rangeInput[0].value = minPrice;
+                        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
+                    } else {
+                        rangeInput[1].value = maxPrice;
+                        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+                    }
+                }
+            });
+        });
+
+        rangeInput.forEach((input) => {
+            input.addEventListener("input", (e) => {
+                let minVal = parseInt(rangeInput[0].value),
+                    maxVal = parseInt(rangeInput[1].value);
+
+                if (maxVal - minVal < priceGap) {
+                    if (e.target.className === "range-min") {
+                        rangeInput[0].value = maxVal - priceGap;
+                    } else {
+                        rangeInput[1].value = minVal + priceGap;
+                    }
+                } else {
+                    priceInput[0].value = minVal;
+                    priceInput[1].value = maxVal;
+                    range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+                    range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
