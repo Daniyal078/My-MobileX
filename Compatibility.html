@@ -20,7 +20,7 @@
 </style>
 
 <body>
-    <!-- mask for background overlay -->
+<!-- mask for background overlay -->
     <div class="mask"></div>
     <!-- mask for background overlay -->
 
@@ -29,7 +29,7 @@
         <i class="fa-solid fa-xmark fs-3 float-end m-2 about-cut"></i>
         <h3 class="fw-xbold fs-1">ABOUT <span class="light-green-text">MOBILEX</span></h3>
 
-        <img src="" alt="">
+        <img class="my-4 rounded-2" src="accets/images/f276990a-c09c-4119-b156-a564c71c284e.jpg" alt="" width="200px">
 
         <h3 class="fw-xbold fs-3 lh-1">CONTINUING TO <span class="light-green-text">INNOVATE</span> ON <br> BEHALF OF
             CONSUMERS.</h3>
@@ -51,30 +51,37 @@
     </div>
     <!-- about us end -->
 
+
     <!-- main navbar -->
-    <div class="navmain ">
+    <div class="navmain">
         <div class="dark-gray-green-bg">
-            <div class="container d-flex align-items-center justify-content-between">
-                <div class="fw-semibold text-white py-2 ">Interested in selling MobileX in your store?<span
-                        class="light-green-text">Learn more</span></div>
-                <i class="fa-solid text-white fs-5 fa-cart-shopping"></i>
+            <div class="container d-flex align-items-center justify-content-lg-between justify-content-center">
+                <div class="fw-semibold text-white py-2 text-lg-start text-center">Interested in selling MobileX in your
+                    store? <span><a class="light-green-text" href="learn-more.html"> Learn more </a></span></div>
+                <a class="d-lg-block d-none" href="Cart.html">
+                    <i class="fa-solid text-white fs-5 fa-cart-shopping"></i>
+                </a>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg dark-green-bg py-4">
+        <nav class="navbar navbar-expand-lg dark-green-bg py-lg-4">
             <div class="container">
-                <a class="navbar-brand" href="Home.html"><img src="accets/images/image-4.png" alt="" width="140px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon text-white"></span> -->
-                    <i class="fa fa-bars text-white fs-4" aria-hidden="true"></i>
-                </button>
-                <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold" href="Home.html#dataPlans">Plans</a>
+                <a class="" href="Home.html"><img src="accets/images/image-4.png" alt="" width="140vh"></a>
+                <div class="">
+                    <a class="d-xl-none d-lg-none" href="Cart.html">
+                        <i class="fa-solid text-white fs-5 fa-cart-shopping"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-bars text-white fs-4" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-xl-4 gap-lg-3 mx-auto">
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0" href="Home.html#dataPlans">Plans</a>
                         </li>
-                        <li class="nav-item mx-1 dropdown">
+                        <li class="nav-item dropdown">
                             <a class="nav-link text-white fw-bold dropdown-toggle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Phones
@@ -87,28 +94,39 @@
                                 <li><a class="dropdown-item bg-transparent text-white" href="E-sim.html">E-SIM</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold" href="Compatibility.html">Compatibility</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0" href="Compatibility.html">Compatibility</a>
                         </li>
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold" href="Data-Forecaster.html">Data Forecaster</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0" href="Data-Forecaster.html">Data Forecaster</a>
                         </li>
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold" href="Home.html#storeLocator">Store Locator</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0" href="Home.html#storeLocator">Store Locator</a>
                         </li>
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold" href="FAQS.html">FAQs</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0" href="FAQS.html">FAQs</a>
                         </li>
-                        <li class="nav-item mx-1">
-                            <a class="text-white nav-link fw-bold aboutUs" href="#">About us</a>
+                        <li class="nav-item">
+                            <a class="text-white nav-link fw-bold px-0 aboutUs" href="#">About us</a>
                         </li>
                     </ul>
-                    <div>
-                        <button class="btn dark-gray-green-bg text-white p-0 rounded-2 px-3 fw-bold"
-                            type="submit">English</button>
+                    <div class="d-flex align-items-center gap-1">
+                        <!-- <button class="btn dark-gray-green-bg text-white p-0 rounded-2 px-3 fw-bold"
+                            type="submit">English</button> -->
+
+                        <div class="dropdown">
+                            <button class="btn bg-white border-0 dropdown-toggle p-1" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                English
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                            </ul>
+                        </div>
                         &nbsp;
-                        <button class="btn light-green-bg rounded-0 px-4 py-2 fw-semibold" type="submit">Get
-                            start</button>
+                        <button class="btn light-green-bg rounded-0 py-2 fw-semibold" type="submit">Get start</button>
                     </div>
                 </div>
             </div>
@@ -254,15 +272,15 @@
 
 
     <!-- footer -->
-    <footer class="dark-green-bg py-5">
+    <footer class="dark-green-bg py-lg-5">
         <div class="container">
             <div class="row my-4 justify-content-center">
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4 my-3">
                     <div class="text-lg-start text-center">
                         <a class="navbar-brand" href="#"><img src="accets/images/image-4.png" alt="" width="140px"></a>
                     </div>
                 </div>
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4 my-3">
                     <div class="text-center">
                         <i class="fa-brands text-white fs-3 mx-2 fa-instagram"></i>
                         <i class="fa-brands text-white fs-3 mx-2 fa-facebook"></i>
@@ -270,7 +288,7 @@
                         <i class="fa-brands text-white fs-3 mx-2 fa-linkedin-in"></i>
                     </div>
                 </div>
-                <div class="col-md-4 my-3">
+                <div class="col-lg-4 my-3">
                     <div class=" text-center">
                         <img src="accets/images/app-store-logo.png" alt="" width="130px">
                         <img src="accets/images/google-play-logo.png" alt="" width="130px">
@@ -281,26 +299,31 @@
             <div class="border-top border-light"></div>
 
             <div class="row my-4">
-                <div class="col-md-6 my-2">
+                <div class="col-lg-6 my-2">
                     <div class="text-lg-start text-center">
                         MobileX and be you are registered trademarks of Mobile X Global, Inc. ©2024 Mobile X Global,
                         Inc.
                     </div>
                 </div>
-                <div class="col-md-6 my-2">
+                <div class="col-lg-6 my-2">
                     <div class="">
-                        <ul class="d-flex justify-content-lg-end justify-content-center">
-                            <a href="Privacy-policy.html" class="list-group px-2 text-decoration-underline"> Privacy
-                                Policy</a>
-                            <a href="terms-of-services.html" class="list-group px-2 text-decoration-underline"> Terms of
-                                Service</a>
-                            <a href="Terms-of-Use.html" class="list-group px-2 text-decoration-underline"> Terms of Use
-                            </a>
-                            <a href="Accessibility.html" class="list-group px-2 text-decoration-underline">
+                        <div class="p-0 row justify-content-lg-end justify-content-center">
+                            <a href="Privacy-policy.html"
+                                class="col-auto mb-lg-0 mb-md-0 mb-2 text-nowrap text-center list-group text-decoration-underline">
+                                Privacy Policy</a>
+                            <a href="terms-of-services.html"
+                                class="col-auto mb-lg-0 mb-md-0 mb-2 text-nowrap text-center list-group text-decoration-underline">
+                                Terms of Service</a>
+                            <a href="Terms-of-Use.html"
+                                class="col-auto mb-lg-0 mb-md-0 mb-2 text-nowrap text-center list-group text-decoration-underline">
+                                Terms of Use </a>
+                            <a href="Accessibility.html"
+                                class="col-auto mb-lg-0 mb-md-0 mb-2 text-nowrap text-center list-group text-decoration-underline">
                                 Accessibility</a>
-                            <a href="Device-Return.html" class="list-group px-2 text-decoration-underline"> Device
-                                Return</a>
-                        </ul>
+                            <a href="Device-Return.html"
+                                class="col-auto mb-lg-0 mb-md-0 mb-2 text-nowrap text-center list-group text-decoration-underline">
+                                Device Return</a>
+                        </div>
                     </div>
                 </div>
             </div>

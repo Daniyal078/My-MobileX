@@ -88,7 +88,7 @@ a {
 }
 
 .bg-gray-light {
-    background-color: rgb(212, 212, 212);
+    background-color: rgb(236, 236, 236);
 }
 
 .bg-xlight {
@@ -103,8 +103,8 @@ a {
     background-color: #F1F1F1;
 }
 
-.ls-1 {
-    letter-spacing: -11px;
+.ls-small {
+    letter-spacing: -2px;
 }
 
 .fw-xbold {
@@ -129,6 +129,11 @@ a {
 }
 
 /* main colors end */
+
+
+button:hover {
+
+}
 
 .mask {
     width: 100%;
@@ -170,7 +175,7 @@ a {
 
 .top-banner-home h2 {
     text-transform: uppercase;
-    font-size: 130px;
+    font-size: 120px;
     /* max-width: 910px; */
     margin: 0;
     position: relative;
@@ -224,7 +229,7 @@ a {
 .fourth-section-img {
     background-image: url('accets/images/Screenshot_2024-07-17_043933-removebg-preview.png');
     background-repeat: no-repeat;
-    bottom: -160px;
+    bottom: -210px;
     height: 100%;
     /* max-height: 200px; */
     right: 0%;
@@ -262,7 +267,7 @@ footer a {
 /* footer end */
 
 @media screen and (max-width: 1200px) {
-    .nav-link{
+    .nav-link {
         font-size: 14px !important;
     }
 }
@@ -271,7 +276,7 @@ footer a {
     .top-banner-home h2 {
         text-align: left !important;
         font-size: 80px !important;
-        max-width: 500px !important;
+        /* max-width: 500px !important; */
         line-height: 1;
         position: relative;
         z-index: 1;
@@ -302,8 +307,8 @@ footer a {
 
 @media screen and (max-width: 560px) {
     .top-banner-home h2 {
-        font-size: 35px !important;
-        max-width: 268px !important;
+        font-size: 50px !important;
+        /* max-width: 268px !important; */
         padding-top: 10px;
         min-height: 165px;
         line-height: 1;
