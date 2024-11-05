@@ -104,7 +104,11 @@ a {
 }
 
 .ls-small {
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+}
+
+.lh-text{
+    letter-spacing: 0.8;
 }
 
 .fw-xbold {
